@@ -1,13 +1,27 @@
 BEAUTY IS KEY SALON — DEPLOYABLE SITE
 =====================================
-Plain static site. No build step. Upload the CONTENTS of this folder
-(index.html, 404.html, robots.txt, photos/) to the web root.
+Plain static site. No build step.
 
-QUICKEST OPTIONS
-- Netlify Drop: go to app.netlify.com/drop and drag this folder in.
-- GitHub Pages: push these files to a repo, then Settings > Pages >
-  Deploy from branch (main, / root).
-- Regular web hosting (cPanel etc.): upload to public_html/.
+FILE LAYOUT (keep these folders exactly as they are)
+  index.html
+  404.html
+  robots.txt
+  css/styles.css              <- all site styling
+  photos/hero-salon-chair.jpg <- hero image
+
+UPDATING THE GITHUB PAGES SITE (github.com/hwplummer-creator/beauty-is-key)
+1. In the repo, delete the old hero-salon-chair.jpg at the top level
+   (and the old index.html will be replaced in step 2).
+2. Click Add file > Upload files, then DRAG the css and photos FOLDERS
+   plus index.html, 404.html and robots.txt from your computer into the
+   page. Dragging keeps the folders; "choose your files" flattens them,
+   which is what made the hero photo disappear.
+3. Commit. Check the file list shows css/ and photos/ as folders.
+   The site updates in a minute or two.
+
+OTHER HOSTS
+- Netlify Drop: drag this whole folder onto app.netlify.com/drop.
+- cPanel-style hosting: upload the contents into public_html/.
 
 BEFORE GOING LIVE (edit index.html)
 1. Online booking: search for  var BOOKING_URL=""  and paste the salon's
