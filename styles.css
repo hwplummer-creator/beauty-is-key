@@ -71,7 +71,7 @@ header:not(.solid) nav.main .btn{background:var(--gold);color:#1a0f17}
 
 /* hero */
 .hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:flex-end;color:var(--on-plum);background:var(--plum2);overflow:hidden;isolation:isolate}
-.hero .photo{position:absolute;inset:0;background:url("../photos/hero-salon-chair.jpg") center 45%/cover no-repeat;z-index:-2;transform:scale(1.08)}
+.hero .photo{position:absolute;inset:0;background:url("hero-salon-chair.jpg") center 45%/cover no-repeat;z-index:-2;transform:scale(1.08)}
 @media (prefers-reduced-motion:no-preference){.hero .photo{animation:kenburns 22s ease-out forwards}@keyframes kenburns{to{transform:scale(1)}}}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(28,8,24,.94) 0%,rgba(46,15,39,.78) 42%,rgba(46,15,39,.25) 100%),linear-gradient(0deg,rgba(20,6,17,.85),transparent 45%)}
 .hero .wrap{width:100%;padding-top:calc(150px + var(--safe-t));padding-bottom:56px}
