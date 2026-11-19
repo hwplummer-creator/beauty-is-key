@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Beauty Is Key Salon</title>
+<meta name="description" content="Beauty Is Key is a Manassas, VA salon for braids, twists, locs and natural hair care. By appointment, seven days a week.">
+<meta name="theme-color" content="#2e0f27">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beauty Is Key Salon">
+<meta property="og:title" content="Beauty Is Key Salon · Braids, Twists &amp; Locs in Manassas, VA">
+<meta property="og:description" content="Healthy hair first, then a style that lasts. Braids, twists, locs and natural hair care by appointment.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232e0f27'/%3E%3Cg transform='translate(14 14) scale(.72)' fill='none' stroke='%23e5b650' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='30' cy='30' r='18'/%3E%3Cpath d='M43 43 L86 86M68 68 L78 58M78 78 L86 70'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" as="image" href="photos/hero-salon-chair.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Beauty Is Key Salon","description":"Salon for braids, twists, locs and natural hair care, by appointment.","telephone":"+1-703-331-3092","address":{"@type":"PostalAddress","streetAddress":"10066 Market St","addressLocality":"Manassas","addressRegion":"VA","postalCode":"20110","addressCountry":"US"},"sameAs":["https://www.instagram.com/beautyiskeysalon/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#fbf6f4;--surface:#f3e8e6;--card:#fffaf8;--fg:#2b1624;--muted:#6e5a66;
+  --plum:#4a1d3d;--plum2:#2e0f27;--brass:#a8761f;--brass-text:#86590f;--gold:#e5b650;--blush:#e9c8c8;
+  --on-plum:#fbf1ee;--line:#e2d1cf;
+  --display:"Cormorant Garamond",Georgia,serif;--body:"Manrope",system-ui,sans-serif;
+  --r:18px;--shadow:0 18px 40px -18px rgba(46,15,39,.35);
+  --safe-t:env(safe-area-inset-top,0px);--safe-b:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1a0f17;--surface:#24131d;--card:#2b1823;--fg:#f6e9e6;--muted:#bda7b0;
+  --plum:#5c2650;--brass:#d9a441;--brass-text:#d9a441;--blush:#6b3a4d;--line:#3b2432;--shadow:0 18px 40px -18px rgba(0,0,0,.7);color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + var(--safe-t))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:var(--safe-b)}
+img{max-width:100%;display:block}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--brass-text);outline-offset:3px;border-radius:6px}
+.hero :focus-visible,.finder :focus-visible,.book :focus-visible,footer :focus-visible,header:not(.solid) :focus-visible,.mbar :focus-visible{outline-color:var(--gold)}
+.book form :focus-visible{outline-color:var(--brass-text)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px)) max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;margin:0;text-wrap:balance}
+h2{font-size:clamp(2.4rem,5.6vw,3.9rem);letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--brass)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-text);margin:0 0 14px}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:currentColor}
+.muted{color:var(--muted)}
+.note{font-size:.8rem;color:var(--muted)}
+section{padding-block:96px}
+@media (max-width:800px){section{padding-block:64px}}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head p{margin:0;max-width:42ch;color:var(--muted)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--plum);color:var(--on-plum);padding:14px 26px;border-radius:999px;font:700 .92rem var(--body);text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn:hover{background:var(--brass);color:#1a0f17;transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.gold{background:var(--gold);color:#1a0f17}
+.btn.gold:hover{background:var(--on-plum)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn.ghost:hover{background:var(--fg);color:var(--bg)}
+.btn svg{width:16px;height:16px}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:var(--safe-t);z-index:30;background:var(--plum2)}
+header{position:fixed;top:var(--safe-t);left:0;right:0;z-index:20;transition:background .3s,box-shadow .3s,color .3s;color:var(--on-plum)}
+header.solid{background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--fg);box-shadow:0 1px 0 var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.6rem;font-weight:700;text-decoration:none}
+.brand svg{width:32px;height:32px;color:var(--gold)}
+header.solid .brand svg{color:var(--brass)}
+nav.main{display:flex;gap:26px;align-items:center;font-size:.9rem;font-weight:600}
+nav.main a:not(.btn){text-decoration:none;opacity:.8;position:relative}
+nav.main a:not(.btn):hover{opacity:1}
+nav.main a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;background:var(--gold);transition:right .25s}
+nav.main a:not(.btn):hover::after{right:0}
+header:not(.solid) nav.main .btn{background:var(--gold);color:#1a0f17}
+.menu-btn{display:none;background:none;border:0;color:inherit;padding:8px;cursor:pointer}
+.menu-btn svg{width:28px;height:28px}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  nav.main{position:absolute;inset:72px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);color:var(--fg);padding:8px 20px 24px;box-shadow:var(--shadow);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s}
+  nav.main.open{transform:none;opacity:1;pointer-events:auto}
+  nav.main a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line);opacity:1;font-size:1.05rem}
+  nav.main a:not(.btn)::after{display:none}
+  nav.main .btn{margin-top:16px;justify-content:center}
+  header:not(.solid) nav.main .btn{background:var(--plum);color:var(--on-plum)}
+}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:flex-end;color:var(--on-plum);background:var(--plum2);overflow:hidden;isolation:isolate}
+.hero .photo{position:absolute;inset:0;background:url("photos/hero-salon-chair.jpg") center 45%/cover no-repeat;z-index:-2;transform:scale(1.08)}
+@media (prefers-reduced-motion:no-preference){.hero .photo{animation:kenburns 22s ease-out forwards}@keyframes kenburns{to{transform:scale(1)}}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(28,8,24,.94) 0%,rgba(46,15,39,.78) 42%,rgba(46,15,39,.25) 100%),linear-gradient(0deg,rgba(20,6,17,.85),transparent 45%)}
+.hero .wrap{width:100%;padding-top:calc(150px + var(--safe-t));padding-bottom:56px}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(3.6rem,10.5vw,8.4rem);line-height:.9;letter-spacing:-.02em;max-width:11ch}
+.hero h1 em{display:block;font-style:italic;background:linear-gradient(90deg,#f6d58b,#c98a2b 70%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
+.now{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 32px}
+.now .lbl{font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.rotator{display:inline-grid;height:1.5em;overflow:hidden;font-family:var(--display);font-style:italic;font-size:1.5rem;line-height:1.5em}
+.rotator span{grid-area:1/1;white-space:nowrap;color:var(--gold);font-weight:600;opacity:0;transform:translateY(100%)}
+.rotator span.on{opacity:1;transform:none;transition:transform .5s,opacity .5s}
+.rotator span.off{opacity:0;transform:translateY(-100%);transition:transform .5s,opacity .5s}
+.hero .lead{font-size:clamp(1.05rem,2vw,1.25rem);max-width:48ch;margin:26px 0 16px;color:rgba(251,241,238,.86)}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:64px;border-top:1px solid rgba(251,241,238,.22);padding-top:24px}
+.hero-meta div{padding-right:44px;margin-right:44px;border-right:1px solid rgba(251,241,238,.22)}
+.hero-meta div:last-child{border:0;margin:0;padding:0}
+.hero-meta b{display:block;font-family:var(--display);font-size:2rem;font-weight:600;color:var(--gold);line-height:1}
+.hero-meta span{font-size:.8rem;letter-spacing:.06em;opacity:.8}
+.badge{position:absolute;right:max(24px,5vw);bottom:64px;width:150px;height:150px;color:var(--gold)}
+.badge svg{width:100%;height:100%}
+@media (prefers-reduced-motion:no-preference){.badge .ring{animation:spin 24s linear infinite;transform-origin:50% 50%}@keyframes spin{to{transform:rotate(360deg)}}}
+@media (max-width:860px){.badge{display:none}.hero-meta{grid-template-columns:1fr 1fr 1fr}.hero-meta div{padding-right:14px;margin-right:14px}.hero-meta b{font-size:1.5rem}}
+
+/* marquee */
+.strip{background:var(--gold);color:#2b1020;overflow:hidden;white-space:nowrap}
+.track{display:inline-flex;padding-block:16px}
+.track span{font-family:var(--display);font-size:1.6rem;font-weight:600;font-style:italic;padding-right:30px}
+.track span::after{content:"✦";font-style:normal;font-size:.85rem;padding-left:30px;opacity:.6}
+@media (prefers-reduced-motion:no-preference){.track{animation:slide 40s linear infinite}@keyframes slide{to{transform:translateX(-50%)}}}
+
+/* services */
+.services{background:var(--surface)}
+.tabs{display:inline-flex;gap:4px;flex-wrap:wrap;margin-bottom:28px;background:var(--card);padding:5px;border-radius:999px;border:1px solid var(--line)}
+.tab{font:700 .9rem var(--body);padding:11px 22px;border-radius:999px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:.2s}
+.tab:hover{color:var(--fg)}
+.tab[aria-selected="true"]{background:var(--plum);color:var(--on-plum)}
+.list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.li{display:grid;grid-template-columns:1fr auto;gap:4px 18px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;align-items:center;min-width:0;transition:transform .25s,box-shadow .25s,border-color .25s}
+.li:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:transparent}
+.li .t{font-weight:700;font-size:1.05rem}
+.li .t small{display:block;font-weight:500;color:var(--muted);font-size:.84rem}
+.li .dur{grid-column:1;color:var(--muted);font-size:.85rem;display:flex;align-items:center;gap:6px}
+.li .price{grid-row:1/span 2;grid-column:2;font-family:var(--display);font-size:2.1rem;font-weight:600;color:var(--plum)}
+@media (prefers-color-scheme:dark){.li .price{color:var(--gold)}}
+.li .bk{grid-column:1/-1;justify-self:start;font-size:.82rem;font-weight:800;color:var(--brass-text);text-decoration:none;margin-top:6px;letter-spacing:.04em}
+.li .bk:hover{text-decoration:underline;text-underline-offset:3px}
+@media (prefers-reduced-motion:no-preference){.list .li{animation:pop .4s both}@keyframes pop{from{opacity:0;transform:translateY(10px)}}}
+@media (max-width:800px){.list{grid-template-columns:1fr}}
+
+/* finder */
+.finder{background:var(--plum2);color:var(--on-plum);position:relative;overflow:hidden}
+.finder::before{content:"";position:absolute;width:620px;height:620px;right:-200px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(229,182,80,.25),transparent 65%)}
+.finder .eyebrow{color:var(--gold)}
+.finder h2 em{color:var(--gold)}
+.fgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;position:relative}
+.q{margin-bottom:26px}
+.q h3{font-family:var(--body);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;opacity:.75}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 .92rem var(--body);padding:11px 18px;border-radius:999px;border:1.5px solid rgba(251,241,238,.3);background:transparent;color:var(--on-plum);cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a0f17}
+.result{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(251,241,238,.18);border-radius:24px;padding:32px;min-height:300px;display:flex;flex-direction:column}
+.result .k{font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.result h3{font-size:clamp(2.2rem,4vw,3rem);margin:10px 0 8px}
+.result p{margin:0 0 20px;opacity:.82}
+.result .facts{display:flex;gap:28px;margin:auto 0 24px;padding-top:20px;border-top:1px solid rgba(251,241,238,.18)}
+.result .facts b{display:block;font-family:var(--display);font-size:1.8rem;color:var(--gold);line-height:1}
+.result .facts span{font-size:.78rem;opacity:.7}
+.result.empty{justify-content:center;align-items:center;text-align:center;opacity:.8}
+.result.empty svg{width:56px;height:56px;color:var(--gold);margin-bottom:14px}
+@media (max-width:860px){.fgrid{grid-template-columns:1fr}}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;position:relative;counter-increment:s}
+.step::before{content:"0" counter(s);font-family:var(--display);font-size:3.4rem;font-weight:600;color:var(--blush);line-height:1;display:block;margin-bottom:14px}
+@media (prefers-color-scheme:dark){.step::before{color:var(--plum)}}
+.step h3{font-size:1.6rem;margin-bottom:8px}
+.step p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* gallery */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px}
+.tile{position:relative;overflow:hidden;isolation:isolate;border-radius:var(--r);display:flex;align-items:end;padding:16px;font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--on-plum);text-decoration:none;min-width:0}
+.tile .bgi{position:absolute;inset:0;z-index:-2;transition:transform .6s}
+.tile:hover .bgi{transform:scale(1.07)}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(115deg,rgba(255,255,255,.07) 0 10px,transparent 10px 20px)}
+.tile.photo::before{background:linear-gradient(transparent 50%,rgba(0,0,0,.7))}
+.tile .ig{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.25);display:grid;place-items:center;opacity:0;transform:scale(.8);transition:.25s}
+.tile:hover .ig{opacity:1;transform:none}
+.tile .ig svg{width:16px;height:16px}
+.t1{grid-column:span 2;grid-row:span 2}.t1 .bgi{background:linear-gradient(160deg,var(--plum),#8a3f6e)}
+.t2 .bgi{background:linear-gradient(135deg,var(--brass),#7a5214)}
+.t3{color:var(--fg)}.t3 .bgi{background:var(--blush)}
+.t4{grid-row:span 2}.t4 .bgi{background:linear-gradient(200deg,#8a3f6e,var(--plum))}
+.t5{color:var(--fg)}.t5 .bgi{background:var(--surface);border:1px solid var(--line);border-radius:inherit}
+.t6{grid-column:span 2;color:#1a0f17}.t6 .bgi{background:linear-gradient(90deg,var(--blush),var(--gold))}
+.tile.photo{color:#fff}
+.tile.photo .bgi{background-size:cover;background-position:center}
+@media (max-width:800px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.t6{grid-column:span 2}}
+
+/* visit */
+.visit{background:var(--surface)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.two>*{min-width:0}
+.about p{color:var(--muted);max-width:52ch}
+.pull{font-family:var(--display);font-style:italic;font-size:1.7rem;line-height:1.25;color:var(--fg)!important;border-left:3px solid var(--brass);padding-left:20px;margin:28px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow)}
+.hours{width:100%;border-collapse:collapse;margin:18px 0 22px}
+.hours td{padding:12px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:700}
+.addr{display:grid;gap:14px;margin-bottom:24px}
+.addr div{display:flex;gap:14px;align-items:flex-start}
+.addr svg{width:20px;height:20px;flex:none;color:var(--brass);margin-top:3px}
+.reviews{margin-top:22px;border:1.5px dashed var(--line);border-radius:var(--r);padding:22px;text-align:center}
+.stars{color:var(--brass);letter-spacing:4px;font-size:1.2rem}
+@media (max-width:860px){.two{grid-template-columns:1fr;gap:40px}}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:860px}
+.faq details{background:var(--surface);border-radius:14px;padding:0 24px;transition:background .2s}
+.faq details[open]{background:var(--card);box-shadow:var(--shadow)}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.05rem;padding:20px 36px 20px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:0;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--plum) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fbf1ee' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/12px no-repeat;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 22px;color:var(--muted);max-width:64ch}
+
+/* book */
+.book{background:var(--plum);color:var(--on-plum);position:relative;overflow:hidden}
+.book::after{content:"";position:absolute;left:-160px;bottom:-260px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(229,182,80,.22),transparent 65%);pointer-events:none}
+.book .eyebrow{color:var(--gold)}
+.book h2 em{color:var(--gold)}
+.book .two{align-items:start;position:relative;z-index:1}
+.book .intro p{opacity:.85;max-width:44ch}
+.checks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;margin-top:2px;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a0f17' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+form{display:grid;gap:16px;background:var(--bg);color:var(--fg);padding:32px;border-radius:24px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+form h3{font-size:1.9rem}
+label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;display:grid;gap:7px;color:var(--muted)}
+input,select,textarea{font:500 1rem var(--body);padding:13px 15px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--fg);width:100%;letter-spacing:normal;text-transform:none;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brass)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+form .btn{justify-content:center;padding-block:16px}
+.ticket{display:none;background:var(--surface);border-radius:14px;padding:18px 20px;font-size:.92rem}
+.ticket.show{display:block}
+.ticket b{font-family:var(--display);font-size:1.4rem;display:block;margin-bottom:6px}
+.ticket pre{white-space:pre-wrap;font:inherit;margin:0 0 12px;color:var(--muted)}
+.ticket .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.ticket .btn{padding:10px 18px;font-size:.85rem}
+#bookext{display:none}
+
+/* footer */
+footer{background:var(--plum2);color:rgba(251,241,238,.75);padding-block:56px 40px;font-size:.9rem}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer .brand{color:var(--on-plum);margin-bottom:12px}
+footer h4{color:var(--gold);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin:0 0 14px}
+footer p{margin:0 0 6px}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+.fine{border-top:1px solid rgba(251,241,238,.15);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem}
+@media (max-width:760px){.fcols{grid-template-columns:1fr}}
+
+/* mobile book bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + var(--safe-b));z-index:15;display:none;transform:translateY(140%);transition:transform .35s}
+.mbar.show{transform:none}
+.mbar .btn{width:100%;justify-content:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
+@media (max-width:860px){.mbar{display:block}}
+
+/* reveal */
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+}
+
+/* polish pass */
+.skip{position:fixed;left:12px;top:calc(12px + var(--safe-t));z-index:40;background:var(--gold);color:#1a0f17;padding:10px 18px;border-radius:999px;font-weight:700;text-decoration:none;transform:translateY(-300%)}
+.skip:focus{transform:none}
+.err{margin:-8px 0 0;color:#b03224;font-size:.85rem;font-weight:700}
+.hero .btn.ghost:hover,.finder .btn.ghost:hover{background:var(--on-plum);color:var(--plum2)}
+@media (prefers-color-scheme:dark){
+  .btn:not(.ghost){background:var(--gold);color:#1a0f17}
+  .btn:not(.ghost):hover{background:var(--on-plum);color:#1a0f17}
+  .t6{color:var(--fg)}
+  .err{color:#ff9d8f}
+}
+@media (max-width:860px){footer{padding-bottom:calc(104px + var(--safe-b))}}
+@media (max-width:560px){
+  .tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;max-width:100%}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:1 0 auto;padding:10px 13px;font-size:.84rem;white-space:nowrap}
+  .li{padding:18px}
+  .li .price{font-size:1.8rem}
+  .result,form,.card{padding:24px 20px}
+  .hero .wrap{padding-top:calc(120px + var(--safe-t));padding-bottom:40px}
+  .hero-meta{margin-top:44px}
+  .hero .cta .btn{flex:1 1 auto;justify-content:center}
+}
+.hero,.finder,.book,.strip{overflow:clip}
+.badge{bottom:190px}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="key" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="30" cy="30" r="18"/><path d="M43 43 L86 86"/><path d="M68 68 L78 58"/><path d="M78 78 L86 70"/></g></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="brand" href="#top"><svg aria-hidden="true"><use href="#key"/></svg>Beauty Is Key</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    <nav class="main" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#finder">Style finder</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="#book" data-book>Book now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="photo" role="img" aria-label="Salon chair in a bright, modern salon"></div>
+    <div class="wrap">
+      <p class="eyebrow rv">Braids · Twists · Locs · Manassas, VA</p>
+      <h1 class="rv d1">Your look, <em>unlocked.</em></h1>
+      <p class="lead rv d2">Healthy hair first, then a style that lasts. Braids, twists and locs, done with patience and detail.</p>
+      <p class="now rv d2" aria-hidden="true"><span class="lbl">Now booking</span><span class="rotator"><span class="on">Knotless braids</span><span>Starter locs</span><span>Passion twists</span><span>Loc retwists</span><span>Goddess braids</span></span></p>
+      <div class="cta rv d3">
+        <a class="btn gold" href="#book" data-book>Book an appointment <svg><use href="#arrow"/></svg></a>
+        <a class="btn ghost" href="#finder">Find my style</a>
+      </div>
+      <div class="hero-meta rv d3">
+        <div><b>23</b><span>Styles on the menu</span></div>
+        <div><b>Free</b><span>Loc consultation</span></div>
+        <div><b>7 days</b><span>By appointment</span></div>
+      </div>
+    </div>
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <g class="ring"><text fill="currentColor" font-family="Manrope" font-weight="800" font-size="12"><textPath href="#circ" textLength="482" lengthAdjust="spacing">HEALTHY HAIR · LASTING STYLE · MANASSAS VA ·</textPath></text></g>
+        <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+        <use href="#key" x="72" y="72" width="56" height="56"/>
+      </svg>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true"><div class="track">
+    <span>Knotless braids</span><span>Starter locs</span><span>Passion twists</span><span>Retwist</span><span>Fulani braids</span><span>Goddess braids</span><span>Natural hair care</span><span>Box braids</span>
+    <span>Knotless braids</span><span>Starter locs</span><span>Passion twists</span><span>Retwist</span><span>Fulani braids</span><span>Goddess braids</span><span>Natural hair care</span><span>Box braids</span>
+  </div></div>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="rv"><p class="eyebrow">Services</p><h2>The <em>menu</em></h2></div>
+        <p class="rv d1">Starting prices. Your final price depends on size, length and your hair. Placeholder list, to be confirmed with the salon.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Service type">
+        <button class="tab" role="tab" aria-selected="true" data-k="braids" type="button">Braids</button>
+        <button class="tab" role="tab" aria-selected="false" data-k="twists" type="button">Twists</button>
+        <button class="tab" role="tab" aria-selected="false" data-k="locs" type="button">Locs</button>
+        <button class="tab" role="tab" aria-selected="false" data-k="care" type="button">Care &amp; style</button>
+      </div>
+      <div class="list" id="svclist" role="tabpanel"></div>
+    </div>
+  </section>
+
+  <section class="finder" id="finder">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="rv"><p class="eyebrow">Style finder</p><h2>Not sure what to book? <em>Ask three questions.</em></h2></div>
+      </div>
+      <div class="fgrid">
+        <div class="rv">
+          <div class="q" data-q="look"><h3>1 · The look you want</h3><div class="chips">
+            <button class="chip" data-v="braids" type="button">Braids</button>
+            <button class="chip" data-v="twists" type="button">Twists</button>
+            <button class="chip" data-v="locs" type="button">Locs</button>
+            <button class="chip" data-v="natural" type="button">My natural hair</button></div></div>
+          <div class="q" data-q="commit"><h3>2 · How long should it last?</h3><div class="chips">
+            <button class="chip" data-v="short" type="button">A few weeks</button>
+            <button class="chip" data-v="long" type="button">1 to 2 months</button>
+            <button class="chip" data-v="perm" type="button">Long term</button></div></div>
+          <div class="q" data-q="time"><h3>3 · Time in the chair</h3><div class="chips">
+            <button class="chip" data-v="quick" type="button">Under 3 hours</button>
+            <button class="chip" data-v="half" type="button">Half a day</button>
+            <button class="chip" data-v="any" type="button">Whatever it takes</button></div></div>
+        </div>
+        <div class="result empty rv d1" id="result" aria-live="polite">
+          <svg aria-hidden="true"><use href="#key"/></svg>
+          <p style="margin:0">Pick an answer for each question and we'll suggest a style to start with.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="rv"><p class="eyebrow">How it works</p><h2>From consult to <em>last edge</em></h2></div>
+        <p class="rv d1">Every appointment follows the same care-first routine, so your style protects your hair instead of straining it.</p>
+      </div>
+      <div class="steps">
+        <div class="step rv"><h3>Consult</h3><p>Tell us the style, size and length you want. We look at your hair and scalp and give you a time estimate.</p></div>
+        <div class="step rv d1"><h3>Prep</h3><p>Arrive with clean, detangled, stretched hair. Skip heavy oils and gels so the install goes smoothly.</p></div>
+        <div class="step rv d2"><h3>Install</h3><p>Neat parts, even tension and no pulling. Settle in, since larger installs take a few hours.</p></div>
+        <div class="step rv d3"><h3>Aftercare</h3><p>Leave with tips for wrapping at night and keeping your scalp moisturized, plus when to come back.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="rv"><p class="eyebrow">Gallery</p><h2>Recent <em>work</em></h2></div>
+        <p class="rv d1">Tap any tile to see more on Instagram. Placeholder tiles until the salon's photos are added.</p>
+      </div>
+      <div class="mosaic rv" id="mosaic"></div>
+      <p style="margin:28px 0 0"><a class="btn ghost" href="https://www.instagram.com/beautyiskeysalon/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>Follow @beautyiskeysalon</a></p>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap two">
+      <div class="about rv">
+        <p class="eyebrow">About</p>
+        <h2>Healthy hair is <em>the foundation</em></h2>
+        <p class="pull">“The style you choose should protect your hair, not strain it.”</p>
+        <p>Beauty Is Key is a Manassas salon for braids, twists and locs. Every appointment starts with a look at your hair and scalp. Plan for a few hours on braids and longer for large installs.</p>
+        <p class="note">Owner bio and story go here once we have them.</p>
+      </div>
+      <div class="card rv d1">
+        <p class="eyebrow">Visit</p>
+        <h2 style="font-size:2.4rem">Hours &amp; location</h2>
+        <table class="hours"><tr><td>Monday – Sunday</td><td>By appointment only</td></tr></table>
+        <div class="addr">
+          <div><svg><use href="#pin"/></svg><span>10066 Market St<br>Manassas, VA 20110</span></div>
+          <div><svg><use href="#phone"/></svg><span>(703) 331-3092</span></div>
+        </div>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=10066+Market+St+Manassas+VA+20110" target="_blank" rel="noopener">Open in Google Maps <svg><use href="#arrow"/></svg></a>
+        <div class="reviews">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p class="note" style="margin:6px 0 0">Space for real client reviews from Google or Instagram, added once the salon picks a few.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="rv"><p class="eyebrow">FAQ</p><h2>Good to <em>know</em></h2></div>
+        <p class="rv d1">Sample answers for the salon to review and correct before the site goes live.</p>
+      </div>
+      <div class="faq rv">
+        <details open><summary>How do I book an appointment?</summary><p>Appointments are by request. Send the style, size and length you want, and we'll confirm a time. A deposit holds your spot.</p></details>
+        <details><summary>How long will my appointment take?</summary><p>It depends on the style. Smaller and longer braids take more time, so a full set can run 4 to 7 hours. Loc retwists are usually 1 to 2 hours. Your confirmation will include an estimate.</p></details>
+        <details><summary>Do you provide the braiding hair?</summary><p>Tell us when you book whether you're bringing your own or want us to supply it. Supplied hair may add to the price.</p></details>
+        <details><summary>How should I prepare my hair?</summary><p>Arrive with clean, fully detangled hair, ideally blow-dried or stretched. Skip heavy oils and gels, since they make it harder to braid.</p></details>
+        <details><summary>How long do braids and twists last?</summary><p>Most last 4 to 8 weeks with good care. Wrap your hair at night, moisturize your scalp, and avoid pulling the style tight.</p></details>
+        <details><summary>How often should I retwist my locs?</summary><p>Most people retwist every 4 to 8 weeks. Your stylist can suggest a schedule based on how fast your hair grows.</p></details>
+        <details><summary>Can I bring my kids?</summary><p>Yes, kids' braids are available for ages 12 and under. Please book their time separately and let us know ahead so we can plan.</p></details>
+        <details><summary>What if I need to cancel or reschedule?</summary><p>Please give as much notice as you can. Deposits are non-refundable, but we'll work with you to move your appointment when possible.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap two">
+      <div class="intro rv">
+        <p class="eyebrow">Book</p>
+        <h2>Reserve <em>your chair</em></h2>
+        <p style="margin-top:22px">Tell us the style, size and length you want and we'll confirm your time.</p>
+        <ul class="checks">
+          <li>A non-refundable deposit holds braid and loc appointments</li>
+          <li>Arrive with clean, detangled hair</li>
+          <li>Let us know if you're bringing your own hair</li>
+          <li>Free consultation for anyone starting locs</li>
+        </ul>
+      </div>
+      <div class="rv d1">
+        <form id="bookform" novalidate>
+          <h3>Appointment request</h3>
+          <label for="name">Name<input id="name" required autocomplete="name" placeholder="Your name" aria-describedby="nameErr"></label>
+          <p class="err" id="nameErr" role="alert" hidden>Please enter your name.</p>
+          <div class="row2">
+            <label for="phone">Phone<input id="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555"></label>
+            <label for="date">Preferred date<input id="date" type="date"></label>
+          </div>
+          <label for="svc">Service
+            <select id="svc"><option>Braids</option><option>Twists</option><option>Starter locs</option><option>Loc retwist / maintenance</option><option>Faux locs</option><option>Wash &amp; care</option><option>Not sure yet</option></select>
+          </label>
+          <label for="msg">Style, size &amp; length<textarea id="msg" rows="3" placeholder="e.g. medium knotless, mid-back"></textarea></label>
+          <button class="btn" type="submit">Request appointment <svg><use href="#arrow"/></svg></button>
+          <div class="ticket" id="ticket" role="status">
+            <b>Your request is ready</b>
+            <pre id="ticketText"></pre>
+            <div class="row"><button class="btn" type="button" id="copyBtn">Copy request</button><span class="note" id="copyNote">Online requests aren't connected yet. Copy this and text or call (703) 331-3092.</span></div>
+          </div>
+        </form>
+        <div id="bookext">
+          <a class="btn gold" href="#book" data-book>Book online now <svg><use href="#arrow"/></svg></a>
+          <p class="note" style="color:var(--on-plum);margin-top:12px">You'll pick your style and time and pay the deposit on the salon's booking page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><a class="brand" href="#top"><svg aria-hidden="true"><use href="#key"/></svg>Beauty Is Key</a><p>Braids, twists, locs and natural hair care in Manassas, Virginia.</p></div>
+      <div><h4>Visit</h4><p>10066 Market St</p><p>Manassas, VA 20110</p><p>(703) 331-3092</p></div>
+      <div><h4>Explore</h4><p><a href="#services">Services</a></p><p><a href="#finder">Style finder</a></p><p><a href="#book">Book</a></p><p><a href="https://www.instagram.com/beautyiskeysalon/" target="_blank" rel="noopener">Instagram</a></p></div>
+    </div>
+    <div class="fine"><span>© 2026 Beauty Is Key Salon</span><span>Stock photo by <a href="https://unsplash.com/@eusuntvibes" target="_blank" rel="noopener">Stefan Vibes</a> on <a href="https://unsplash.com/photos/barber-chair-in-modern-salon-workspace-N15dzf3dAUk" target="_blank" rel="noopener">Unsplash</a></span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn gold" href="#book" data-book>Book an appointment <svg><use href="#arrow"/></svg></a></div>
+
+<script>
+var menu = {
+  braids: [
+    ["Box braids","Small, medium, or jumbo","4 to 7 hrs","$150+","Braids"],
+    ["Knotless braids","","4 to 6 hrs","$180+","Braids"],
+    ["Feed-in braids / cornrows","","2 to 3 hrs","$80+","Braids"],
+    ["Stitch braids","","2 to 4 hrs","$100+","Braids"],
+    ["Fulani braids","","3 to 5 hrs","$130+","Braids"],
+    ["Goddess / boho braids","","5 to 7 hrs","$200+","Braids"],
+    ["Kids' braids","Ages 12 and under","1 to 3 hrs","$60+","Braids"]
+  ],
+  twists: [
+    ["Passion / Senegalese twists","","3 to 5 hrs","$150+","Twists"],
+    ["Marley twists","","3 to 5 hrs","$140+","Twists"],
+    ["Two-strand twists","Natural hair","2 to 3 hrs","$90+","Twists"]
+  ],
+  locs: [
+    ["Loc consultation","Find the right start for your hair","30 min","Free","Starter locs"],
+    ["Starter locs","Comb coils, two-strand twists, or interlocking","3 to 5 hrs","$150+","Starter locs"],
+    ["Loc retwist","","1 to 2 hrs","$70+","Loc retwist / maintenance"],
+    ["Retwist and style","","2 to 3 hrs","$95+","Loc retwist / maintenance"],
+    ["Interlocking","","2 to 3 hrs","$100+","Loc retwist / maintenance"],
+    ["Loc maintenance and repair","","1 to 2 hrs","$60+","Loc retwist / maintenance"],
+    ["Loc extensions","","5 to 8 hrs","$300+","Starter locs"],
+    ["Faux locs / butterfly locs","","4 to 6 hrs","$180+","Faux locs"]
+  ],
+  care: [
+    ["Shampoo and deep condition","","45 min","$35","Wash & care"],
+    ["Scalp treatment","","30 min","$40","Wash & care"],
+    ["Loc color / tone","","1 to 2 hrs","$75+","Loc retwist / maintenance"],
+    ["Silk press","","2 hrs","$85+","Wash & care"],
+    ["Cut and shape-up","","30 min","$35+","Wash & care"]
+  ]
+};
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");}
+function find(name){for(var k in menu){for(var i=0;i<menu[k].length;i++){if(menu[k][i][0]===name)return menu[k][i];}}}
+
+/* services */
+var svclist=document.getElementById("svclist");
+function showMenu(k){
+  svclist.innerHTML=menu[k].map(function(r,i){
+    return '<div class="li" style="animation-delay:'+(i*45)+'ms"><span class="t">'+esc(r[0])+(r[1]?'<small>'+esc(r[1])+'</small>':'')+'</span><span class="price">'+esc(r[3])+'</span><span class="dur"><svg width="14" height="14"><use href="#clock"/></svg>'+esc(r[2])+'</span><a class="bk" href="#book" data-book data-svc="'+esc(r[4])+'" data-style="'+esc(r[0])+'">Book this style →</a></div>';
+  }).join("");
+  applyBooking();
+}
+var tabs=[].slice.call(document.querySelectorAll(".tab"));
+function selectTab(b,focus){
+  tabs.forEach(function(t){var on=t===b;t.setAttribute("aria-selected",on?"true":"false");t.tabIndex=on?0:-1;});
+  svclist.setAttribute("aria-labelledby",b.id);
+  if(focus){b.focus();if(b.scrollIntoView)b.scrollIntoView({block:"nearest",inline:"nearest"});}
+  showMenu(b.dataset.k);
+}
+tabs.forEach(function(b,i){
+  b.id="tab-"+b.dataset.k;b.setAttribute("aria-controls","svclist");b.tabIndex=i?-1:0;
+  b.addEventListener("click",function(){selectTab(b);});
+  b.addEventListener("keydown",function(e){
+    var n=e.key==="ArrowRight"?i+1:e.key==="ArrowLeft"?i-1:e.key==="Home"?0:e.key==="End"?tabs.length-1:null;
+    if(n===null)return;e.preventDefault();selectTab(tabs[(n+tabs.length)%tabs.length],true);
+  });
+});
+svclist.setAttribute("aria-labelledby","tab-braids");
+function preselect(svc,style){
+  var sel=document.getElementById("svc");
+  for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===svc)sel.selectedIndex=i;}
+  if(style){var m=document.getElementById("msg");if(!m.value)m.value=style+", ";}
+}
+document.addEventListener("click",function(e){
+  var a=e.target.closest("[data-svc]");
+  if(a&&!BOOKING_URL)preselect(a.dataset.svc,a.dataset.style);
+});
+
+/* style finder */
+var answers={};
+var picks={
+  braids:{short:"Feed-in braids / cornrows",long:"Knotless braids",perm:"Knotless braids"},
+  twists:{short:"Two-strand twists",long:"Passion / Senegalese twists",perm:"Marley twists"},
+  locs:{short:"Faux locs / butterfly locs",long:"Faux locs / butterfly locs",perm:"Starter locs"},
+  natural:{short:"Silk press",long:"Two-strand twists",perm:"Loc consultation"}
+};
+var quick={"Knotless braids":"Stitch braids","Passion / Senegalese twists":"Two-strand twists","Marley twists":"Two-strand twists","Starter locs":"Loc consultation"};
+var any={"Knotless braids":"Goddess / boho braids","Feed-in braids / cornrows":"Fulani braids","Starter locs":"Loc extensions"};
+var why={
+  "Knotless braids":"Lighter on your scalp than classic box braids, with a natural-looking root. A go-to protective style.",
+  "Feed-in braids / cornrows":"Sleek, quick and easy to keep up. Great for a few weeks of no-fuss styling.",
+  "Stitch braids":"Crisp, defined parts that look sharp and come together faster than a full set.",
+  "Goddess / boho braids":"Braids with soft curly pieces left out for a romantic, textured finish. Worth the extra hours.",
+  "Fulani braids":"Center and side cornrows finished with braids. Bold and fun, and quicker than a full set.",
+  "Two-strand twists":"Uses your own hair, gentle on your edges, and a good way to stretch between bigger styles.",
+  "Passion / Senegalese twists":"Smooth or bouncy rope twists that hold up for weeks with light care.",
+  "Marley twists":"A fuller, matte twist with a natural texture that lasts.",
+  "Faux locs / butterfly locs":"Get the loc look without the long-term commitment. Easy to take down when you're ready for a change.",
+  "Loc retwist":"Already have locs? Keep them neat between bigger appointments.",
+  "Starter locs":"Begin your loc journey with coils, twists or interlocking chosen for your hair type.",
+  "Loc extensions":"Instant length and fullness for a full head of locs from day one.",
+  "Loc consultation":"Not sure where to start? A free 30-minute consult finds the right method for your hair.",
+  "Silk press":"A smooth, bouncy, heat-styled finish for natural hair, with no extensions needed."
+};
+var result=document.getElementById("result");
+document.querySelectorAll(".q").forEach(function(q){
+  var g=q.querySelector(".chips");g.setAttribute("role","group");g.setAttribute("aria-label",q.querySelector("h3").textContent);
+  q.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed","false");});
+  q.addEventListener("click",function(e){
+    var c=e.target.closest(".chip");if(!c)return;
+    q.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed","false");});
+    c.setAttribute("aria-pressed","true");answers[q.dataset.q]=c.dataset.v;renderResult();
+  });
+});
+function renderResult(){
+  if(!answers.look||!answers.commit||!answers.time){
+    var n=["look","commit","time"].filter(function(k){return answers[k];}).length;
+    result.className="result empty";
+    result.innerHTML='<svg aria-hidden="true"><use href="#key"/></svg><p style="margin:0">'+(n?n+' of 3 answered. Keep going.':'Pick an answer for each question and we\'ll suggest a style to start with.')+'</p>';
+    return;
+  }
+  var name=picks[answers.look][answers.commit];
+  if(answers.time==="quick"&&quick[name])name=quick[name];
+  if(answers.time==="any"&&any[name])name=any[name];
+  var r=find(name);
+  result.className="result";
+  result.innerHTML='<span class="k">Your match</span><h3>'+esc(r[0])+'</h3><p>'+esc(why[r[0]]||"")+'</p><div class="facts"><div><b>'+esc(r[3])+'</b><span>Starting price</span></div><div><b>'+esc(r[2])+'</b><span>In the chair</span></div></div><div><a class="btn gold" href="#book" data-book data-svc="'+esc(r[4])+'" data-style="'+esc(r[0])+'">Book this style <svg><use href="#arrow"/></svg></a></div>';
+  applyBooking();
+}
+
+/* gallery: set "src" (e.g. "photos/knotless.jpg") and optional "href" to an Instagram post */
+var IG="https://www.instagram.com/beautyiskeysalon/";
+var gallery=[
+  {cap:"Knotless braids",src:"",href:""},
+  {cap:"Starter locs",src:"",href:""},
+  {cap:"Retwist",src:"",href:""},
+  {cap:"Goddess braids",src:"",href:""},
+  {cap:"Twists",src:"",href:""},
+  {cap:"Loc updo",src:"",href:""}
+];
+document.getElementById("mosaic").innerHTML=gallery.map(function(g,i){
+  var bg=g.src?' style="background-image:url(\''+esc(g.src)+'\')"':"";
+  return '<a class="tile t'+(i+1)+(g.src?" photo":"")+'" href="'+esc(g.href||IG)+'" target="_blank" rel="noopener" aria-label="'+esc(g.cap)+' on Instagram"><span class="bgi"'+bg+'></span><span class="ig"><svg><use href="#ig"/></svg></span>'+(g.src?"":"Photo · ")+esc(g.cap)+'</a>';
+}).join("");
+
+/* booking: paste the salon's live booking page (Booksy, StyleSeat, Square, Vagaro...). Leave "" to keep the request form. */
+var BOOKING_URL="";
+function applyBooking(){
+  if(!BOOKING_URL)return;
+  document.querySelectorAll("[data-book]").forEach(function(a){a.href=BOOKING_URL;a.target="_blank";a.rel="noopener";});
+  document.getElementById("bookform").style.display="none";
+  document.getElementById("bookext").style.display="block";
+}
+document.getElementById("bookform").addEventListener("submit",function(e){
+  e.preventDefault();
+  var name=document.getElementById("name");
+  var err=document.getElementById("nameErr");
+  if(!name.value.trim()){err.hidden=false;name.setAttribute("aria-invalid","true");name.style.borderColor="#c0392b";name.focus();return;}
+  err.hidden=true;name.removeAttribute("aria-invalid");name.style.borderColor="";
+  var d=document.getElementById("date").value;
+  var txt="Hi Beauty Is Key! I'd like to book an appointment.\nName: "+name.value.trim()+
+    (document.getElementById("phone").value?"\nPhone: "+document.getElementById("phone").value:"")+
+    "\nService: "+document.getElementById("svc").value+
+    (d?"\nPreferred date: "+new Date(d+"T12:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"}):"")+
+    (document.getElementById("msg").value.trim()?"\nStyle: "+document.getElementById("msg").value.trim():"");
+  document.getElementById("ticketText").textContent=txt;
+  document.getElementById("ticket").classList.add("show");
+});
+document.getElementById("copyBtn").addEventListener("click",function(){
+  var t=document.getElementById("ticketText").textContent,n=document.getElementById("copyNote");
+  try{navigator.clipboard.writeText(t).then(function(){n.textContent="Copied. Text or call (703) 331-3092 to send it.";},function(){n.textContent="Couldn't copy automatically. Select the text above to copy it.";});}
+  catch(err){n.textContent="Couldn't copy automatically. Select the text above to copy it.";}
+});
+
+/* header, mobile menu, mobile book bar */
+var hdr=document.getElementById("hdr"),mbar=document.getElementById("mbar"),bookSec=document.getElementById("book");
+function onScroll(){
+  var y=window.scrollY;
+  hdr.classList.toggle("solid",y>40||nav.classList.contains("open"));
+  var b=bookSec.getBoundingClientRect();
+  mbar.classList.toggle("show",y>window.innerHeight*.7&&!(b.top<window.innerHeight&&b.bottom>0));
+}
+var nav=document.getElementById("nav"),mb=document.getElementById("menuBtn");
+mb.addEventListener("click",function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o);onScroll();});
+nav.addEventListener("click",function(e){if(e.target.closest("a")){nav.classList.remove("open");mb.setAttribute("aria-expanded","false");onScroll();}});
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+/* rotating words */
+(function(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var s=document.querySelectorAll(".rotator span"),i=0;
+  setInterval(function(){
+    var cur=s[i];cur.classList.remove("on");cur.classList.add("off");
+    i=(i+1)%s.length;var nx=s[i];nx.classList.remove("off");void nx.offsetWidth;nx.classList.add("on");
+    setTimeout(function(){cur.classList.remove("off");},500);
+  },2400);
+})();
+
+/* scroll reveal */
+(function(){
+  var els=document.querySelectorAll(".rv");
+  if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in");});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}});},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+  els.forEach(function(e){io.observe(e);});
+})();
+
+showMenu("braids");
+</script>
+</body>
+</html>
