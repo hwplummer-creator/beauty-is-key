@@ -171,6 +171,8 @@ function applyBooking(){
   document.getElementById("bookform").hidden=true;
   document.getElementById("bookext").classList.add("show");
 }
+/* deposits: the salon's Venmo username (no @) and deposit amount. Set VENMO="" to hide the Venmo button. */
+var VENMO="Badkey127",DEPOSIT=25;
 document.getElementById("bookform").addEventListener("submit",function(e){
   e.preventDefault();
   var name=document.getElementById("name");
@@ -179,10 +181,18 @@ document.getElementById("bookform").addEventListener("submit",function(e){
   err.hidden=true;name.removeAttribute("aria-invalid");
   var d=document.getElementById("date").value;
   var txt="Hi Beauty Is Key! I'd like to book an appointment.\nName: "+name.value.trim()+
-    (document.getElementById("phone").value?"\nPhone: "+document.getElementById("phone").value:"")+
+    (document.getElementById("tel").value?"\nPhone: "+document.getElementById("tel").value:"")+
     "\nService: "+document.getElementById("svc").value+
     (d?"\nPreferred date: "+new Date(d+"T12:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"}):"")+
     (document.getElementById("msg").value.trim()?"\nStyle: "+document.getElementById("msg").value.trim():"");
+  var svc=document.getElementById("svc").value,sty=document.getElementById("msg").value.trim();
+  var note="Deposit - "+name.value.trim()+" - "+(sty||svc)+(d?" - "+new Date(d+"T12:00").toLocaleDateString(undefined,{month:"short",day:"numeric"}):"");
+  var v=document.getElementById("venmo");
+  if(VENMO){
+    v.href="https://venmo.com/"+encodeURIComponent(VENMO)+"?txn=pay&amount="+DEPOSIT+"&note="+encodeURIComponent(note.slice(0,250));
+    txt+="\nDeposit: $"+DEPOSIT+" sent on Venmo to @"+VENMO;
+  }
+  v.hidden=!VENMO;document.getElementById("venmoNote").hidden=!VENMO;
   document.getElementById("ticketText").textContent=txt;
   document.getElementById("ticket").classList.add("show");
 });
