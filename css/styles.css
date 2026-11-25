@@ -244,6 +244,10 @@ form .btn{justify-content:center;padding-block:16px}
 .ticket pre{white-space:pre-wrap;font:inherit;margin:0 0 12px;color:var(--muted)}
 .ticket .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .ticket .btn{padding:10px 18px;font-size:.85rem}
+.ticket .step-l{font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);margin:14px 0 8px}
+.ticket .btn.venmo{background:#008cff;color:#fff}
+.ticket .btn.venmo:hover{background:#0074d4;color:#fff}
+#venmoNote{margin:8px 0 0}
 #bookext{display:none}
 
 /* footer */
