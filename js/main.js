@@ -209,6 +209,9 @@ form.addEventListener("submit",function(e){
     if(t.scrollIntoView)t.scrollIntoView({behavior:"smooth",block:"nearest"});
   }
   /* Netlify Forms emails each request to the salon. Anywhere else (preview, GitHub Pages) it falls back to copy-and-text. */
+  var noEmail=location.protocol==="file:"||/github\.io$/.test(location.hostname);
+  try{if(window.top!==window.self)noEmail=true;}catch(x){noEmail=true;}
+  if(noEmail){show(false);return;}
   fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()})
     .then(function(r){show(r.ok);}).catch(function(){show(false);});
 });
