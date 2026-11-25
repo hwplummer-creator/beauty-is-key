@@ -40,6 +40,19 @@ COMMON EDITS (all in js/main.js)
   StyleSeat / Square / Vagaro link. Leave it empty to keep the request
   form.
 
+APPOINTMENT REQUESTS BY EMAIL (Netlify)
+The booking form is a Netlify Form named "appointment". On Netlify each
+request is emailed to the salon; anywhere else the form falls back to
+"copy and text us".
+1. In Netlify: Forms > Enable form detection, then redeploy the site.
+2. Forms > appointment > Form notifications > Add notification > Email
+   notification. Enter the salon's email. If that address isn't on your
+   Netlify team, Netlify emails it a confirmation link; nothing is sent
+   until someone clicks Confirm.
+3. Send a test request from the live site and check the inbox (and spam).
+Each email includes a "deposit-note" line matching the client's Venmo
+note, so payments are easy to match to requests.
+
 OTHER HOSTS
 - Netlify Drop: drag this whole folder onto app.netlify.com/drop.
 - cPanel-style hosting: upload the contents into public_html/.
