@@ -223,27 +223,37 @@
         </ul>
       </div>
       <div class="rv d1">
-        <form id="bookform" novalidate>
+        <form id="bookform" name="appointment" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="appointment">
+          <input type="hidden" name="deposit-note" id="depNote" value="">
+          <p class="hp" aria-hidden="true"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <h3>Appointment request</h3>
-          <label for="name">Name<input id="name" required autocomplete="name" placeholder="Your name" aria-describedby="nameErr"></label>
+          <label for="name">Name<input id="name" name="name" required autocomplete="name" placeholder="Your name" aria-describedby="nameErr"></label>
           <p class="err" id="nameErr" role="alert" hidden>Please enter your name.</p>
           <div class="row2">
-            <label for="tel">Phone<input id="tel" type="tel" autocomplete="tel" placeholder="(555) 555-5555"></label>
-            <label for="date">Preferred date<input id="date" type="date"></label>
+            <label for="tel">Phone<input id="tel" name="phone" type="tel" required autocomplete="tel" placeholder="(555) 555-5555" aria-describedby="telErr"></label>
+            <label for="email">Email<input id="email" name="email" type="email" autocomplete="email" placeholder="Optional"></label>
           </div>
-          <label for="svc">Service
-            <select id="svc"><option>Braids</option><option>Kids' braids</option><option>Cornrows</option><option>Crochet</option><option>Locs</option><option>Natural hair / silk press</option><option>Not sure yet</option></select>
-          </label>
-          <label for="msg">Style, size &amp; length<textarea id="msg" rows="3" placeholder="e.g. medium knotless, mid-back"></textarea></label>
-          <button class="btn" type="submit">Request appointment <svg><use href="#arrow"/></svg></button>
-          <div class="ticket" id="ticket" role="status">
-            <b>Your request is ready</b>
+          <p class="err" id="telErr" role="alert" hidden>Please enter a phone number so we can confirm your time.</p>
+          <div class="row2">
+            <label for="date">Preferred date<input id="date" name="date" type="date"></label>
+            <label for="svc">Service
+              <select id="svc" name="service"><option>Braids</option><option>Kids' braids</option><option>Cornrows</option><option>Crochet</option><option>Locs</option><option>Natural hair / silk press</option><option>Not sure yet</option></select>
+            </label>
+          </div>
+          <label for="msg">Style, size &amp; length<textarea id="msg" name="style" rows="3" placeholder="e.g. medium knotless, mid-back"></textarea></label>
+          <button class="btn" type="submit" id="sendBtn">Request appointment <svg><use href="#arrow"/></svg></button>
+          <div class="ticket" id="ticket" role="status" tabindex="-1">
+            <b id="tkHead">Request sent</b>
+            <p class="m0" id="tkSent">We got your request and will text you to confirm a time once your deposit comes through.</p>
             <pre id="ticketText"></pre>
-            <p class="step-l">1. Pay the $25 deposit</p>
+            <p class="step-l" id="stepPay">Last step: pay the $25 deposit</p>
             <div class="row"><a class="btn venmo" id="venmo" href="https://venmo.com/Badkey127" target="_blank" rel="noopener">Pay $25 deposit on Venmo</a></div>
             <p class="note" id="venmoNote">Opens Venmo to @Badkey127 with the amount and a note filled in. The deposit is non-refundable.</p>
-            <p class="step-l">2. Send us your request</p>
-            <div class="row"><button class="btn" type="button" id="copyBtn">Copy request</button><span class="note" id="copyNote">Copy this and text or call (703) 331-3092. We'll confirm your time once the deposit comes through.</span></div>
+            <div id="tkCopy">
+              <p class="step-l">Then send us your request</p>
+              <div class="row"><button class="btn" type="button" id="copyBtn">Copy request</button><span class="note" id="copyNote">Copy this and text or call (703) 331-3092. We'll confirm your time once the deposit comes through.</span></div>
+            </div>
           </div>
         </form>
         <div id="bookext">
