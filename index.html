@@ -197,7 +197,7 @@
         <p class="rv d1">Sample answers for the salon to review and correct before the site goes live.</p>
       </div>
       <div class="faq rv">
-        <details open><summary>How do I book an appointment?</summary><p>Appointments are by request. Send the style, size and length you want, and we'll confirm a time. A deposit holds your spot.</p></details>
+        <details open><summary>How do I book an appointment?</summary><p>Appointments are by request. Send the style, size and length you want, and we'll confirm a time. A $25 deposit on Venmo (@Badkey127) holds your spot.</p></details>
         <details><summary>How long will my appointment take?</summary><p>Plan on 3 hours or more for all braid appointments, 2 hours or more for cornrows and crochet, and 1½ hours or more for kids. Smaller and longer styles take longer. Your confirmation will include an estimate.</p></details>
         <details><summary>Do you provide the braiding hair?</summary><p>Tell us when you book whether you're bringing your own or want us to supply it. Crochet prices don't include the cost of hair, and human hair for boho braids costs extra.</p></details>
         <details><summary>How should I prepare my hair?</summary><p>Arrive with clean, fully detangled hair, ideally blow-dried or stretched. Skip heavy oils and gels, since they make it harder to braid.</p></details>
@@ -216,7 +216,7 @@
         <h2>Reserve <em>your chair</em></h2>
         <p class="mt22">Tell us the style, size and length you want and we'll confirm your time.</p>
         <ul class="checks">
-          <li>A non-refundable deposit holds braid and loc appointments</li>
+          <li>A $25 non-refundable deposit on Venmo holds your appointment</li>
           <li>Arrive with clean, detangled hair</li>
           <li>Let us know if you're bringing your own hair</li>
           <li>Add a trim to any service for $10</li>
@@ -228,7 +228,7 @@
           <label for="name">Name<input id="name" required autocomplete="name" placeholder="Your name" aria-describedby="nameErr"></label>
           <p class="err" id="nameErr" role="alert" hidden>Please enter your name.</p>
           <div class="row2">
-            <label for="phone">Phone<input id="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555"></label>
+            <label for="tel">Phone<input id="tel" type="tel" autocomplete="tel" placeholder="(555) 555-5555"></label>
             <label for="date">Preferred date<input id="date" type="date"></label>
           </div>
           <label for="svc">Service
@@ -239,7 +239,11 @@
           <div class="ticket" id="ticket" role="status">
             <b>Your request is ready</b>
             <pre id="ticketText"></pre>
-            <div class="row"><button class="btn" type="button" id="copyBtn">Copy request</button><span class="note" id="copyNote">Online requests aren't connected yet. Copy this and text or call (703) 331-3092.</span></div>
+            <p class="step-l">1. Pay the $25 deposit</p>
+            <div class="row"><a class="btn venmo" id="venmo" href="https://venmo.com/Badkey127" target="_blank" rel="noopener">Pay $25 deposit on Venmo</a></div>
+            <p class="note" id="venmoNote">Opens Venmo to @Badkey127 with the amount and a note filled in. The deposit is non-refundable.</p>
+            <p class="step-l">2. Send us your request</p>
+            <div class="row"><button class="btn" type="button" id="copyBtn">Copy request</button><span class="note" id="copyNote">Copy this and text or call (703) 331-3092. We'll confirm your time once the deposit comes through.</span></div>
           </div>
         </form>
         <div id="bookext">
