@@ -173,28 +173,44 @@ function applyBooking(){
 }
 /* deposits: the salon's Venmo username (no @) and deposit amount. Set VENMO="" to hide the Venmo button. */
 var VENMO="Badkey127",DEPOSIT=25;
-document.getElementById("bookform").addEventListener("submit",function(e){
+var form=document.getElementById("bookform");
+function flag(el,errEl,bad){errEl.hidden=!bad;if(bad)el.setAttribute("aria-invalid","true");else el.removeAttribute("aria-invalid");return bad;}
+form.addEventListener("submit",function(e){
   e.preventDefault();
-  var name=document.getElementById("name");
-  var err=document.getElementById("nameErr");
-  if(!name.value.trim()){err.hidden=false;name.setAttribute("aria-invalid","true");name.focus();return;}
-  err.hidden=true;name.removeAttribute("aria-invalid");
-  var d=document.getElementById("date").value;
-  var txt="Hi Beauty Is Key! I'd like to book an appointment.\nName: "+name.value.trim()+
-    (document.getElementById("tel").value?"\nPhone: "+document.getElementById("tel").value:"")+
-    "\nService: "+document.getElementById("svc").value+
-    (d?"\nPreferred date: "+new Date(d+"T12:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"}):"")+
-    (document.getElementById("msg").value.trim()?"\nStyle: "+document.getElementById("msg").value.trim():"");
+  var name=document.getElementById("name"),tel=document.getElementById("tel");
+  var b1=flag(name,document.getElementById("nameErr"),!name.value.trim());
+  var b2=flag(tel,document.getElementById("telErr"),tel.value.replace(/\D/g,"").length<7);
+  if(b1||b2){(b1?name:tel).focus();return;}
+  var d=document.getElementById("date").value,em=document.getElementById("email").value.trim();
   var svc=document.getElementById("svc").value,sty=document.getElementById("msg").value.trim();
+  var txt="Hi Beauty Is Key! I'd like to book an appointment.\nName: "+name.value.trim()+
+    "\nPhone: "+tel.value.trim()+(em?"\nEmail: "+em:"")+
+    "\nService: "+svc+
+    (d?"\nPreferred date: "+new Date(d+"T12:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"}):"")+
+    (sty?"\nStyle: "+sty:"");
   var note="Deposit - "+name.value.trim()+" - "+(sty||svc)+(d?" - "+new Date(d+"T12:00").toLocaleDateString(undefined,{month:"short",day:"numeric"}):"");
+  document.getElementById("depNote").value=VENMO?note:"";
   var v=document.getElementById("venmo");
   if(VENMO){
     v.href="https://venmo.com/"+encodeURIComponent(VENMO)+"?txn=pay&amount="+DEPOSIT+"&note="+encodeURIComponent(note.slice(0,250));
     txt+="\nDeposit: $"+DEPOSIT+" sent on Venmo to @"+VENMO;
   }
-  v.hidden=!VENMO;document.getElementById("venmoNote").hidden=!VENMO;
+  [v,document.getElementById("venmoNote"),document.getElementById("stepPay")].forEach(function(x){x.hidden=!VENMO;});
   document.getElementById("ticketText").textContent=txt;
-  document.getElementById("ticket").classList.add("show");
+  var btn=document.getElementById("sendBtn");btn.disabled=true;btn.firstChild.textContent="Sending… ";
+  function show(sent){
+    btn.disabled=false;btn.firstChild.textContent="Request appointment ";
+    document.getElementById("tkHead").textContent=sent?"Request sent":"Your request is ready";
+    document.getElementById("tkSent").hidden=!sent;
+    document.getElementById("ticketText").hidden=sent;
+    document.getElementById("tkCopy").hidden=sent;
+    document.getElementById("stepPay").textContent=sent?"Last step: pay the $"+DEPOSIT+" deposit":"First, pay the $"+DEPOSIT+" deposit";
+    var t=document.getElementById("ticket");t.classList.add("show");t.focus({preventScroll:true});
+    if(t.scrollIntoView)t.scrollIntoView({behavior:"smooth",block:"nearest"});
+  }
+  /* Netlify Forms emails each request to the salon. Anywhere else (preview, GitHub Pages) it falls back to copy-and-text. */
+  fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()})
+    .then(function(r){show(r.ok);}).catch(function(){show(false);});
 });
 document.getElementById("copyBtn").addEventListener("click",function(){
   var t=document.getElementById("ticketText").textContent,n=document.getElementById("copyNote");
