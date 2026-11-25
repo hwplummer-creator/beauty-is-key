@@ -33,6 +33,9 @@ COMMON EDITS (all in js/main.js)
 - Gallery:  var looks = [ ... ]  Each line is one style with its photos.
   Put new photos in images/gallery/ and list them as
   "images/gallery/your-photo.jpg".
+- Venmo deposit:  var VENMO="Badkey127",DEPOSIT=25;  Change the username
+  (no @) or amount. Also update "$25" and "@Badkey127" in index.html
+  (booking section and FAQ). Set VENMO="" to hide the Venmo button.
 - Online booking:  var BOOKING_URL=""  Paste the salon's Booksy /
   StyleSeat / Square / Vagaro link. Leave it empty to keep the request
   form.
